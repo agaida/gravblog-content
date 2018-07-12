@@ -33,7 +33,7 @@ content:
 * Featherlight (Lightbox/Gallery)
 * Frontend Edit Button (edit pages if logged in as admin)
 * GDPR Privacy Setup (mal schauen)
-* Git Sync (must have)
+* Git Sync (must have) (Documentation needed)
 
 ### Cool Plugins
 
