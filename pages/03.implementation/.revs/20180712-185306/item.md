@@ -59,9 +59,9 @@ content:
 * SocialButtons 
 * Tablesorter
 * Text Formatter (könnte nett sein)
-* Quick Tray Links
 *  Widget  (könnte nett sein)
 *  Wordcount
+
 
 
 ## Cool Plugins

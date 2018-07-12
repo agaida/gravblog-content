@@ -1,9 +1,5 @@
 ---
 title: Implementation
-twitterenable: false
-twittercardoptions: summary
-articleenabled: false
-facebookenable: false
 content:
     items: '@self.children'
     order:
@@ -58,11 +54,6 @@ content:
 * SnappyGrav (könnte cool sein)
 * SocialButtons 
 * Tablesorter
-* Text Formatter (könnte nett sein)
-* Quick Tray Links
-*  Widget  (könnte nett sein)
-*  Wordcount
-
 
 ## Cool Plugins
 

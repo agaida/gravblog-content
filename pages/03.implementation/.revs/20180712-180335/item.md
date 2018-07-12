@@ -1,9 +1,5 @@
 ---
 title: Implementation
-twitterenable: false
-twittercardoptions: summary
-articleenabled: false
-facebookenable: false
 content:
     items: '@self.children'
     order:
@@ -40,31 +36,9 @@ content:
 * Git Sync (must have) (Documentation needed)
 * Grav Google Maps Plugin (wofür auch immer)
 * (JSComments eventuell später)
-* LangSwitcher or Language Selector - must have - later)
-* (Login Plugin OAuth Addon - haben wollen - später)
-* ( Maintenance - haben wollen - später)
-* Markdown Color (must have - later)
-* Markdown Font Awesome (must have - later)
-* Markdown Notices (must have - later)
-* Markdown Task Lists  (must have - later)
-* Print Friendly (must have - later)
-* Private (must have - later)
-* Problems 
-* Quick Save 
-* Reading Time
-*  Recent Posts  
-* SEO 
-* Sitemap
-* SnappyGrav (könnte cool sein)
-* SocialButtons 
-* Tablesorter
-* Text Formatter (könnte nett sein)
-* Quick Tray Links
-*  Widget  (könnte nett sein)
-*  Wordcount
 
 
-## Cool Plugins
+### Cool Plugins
 
 * Blackhole for siduction manual
 * Directory Listing v1.1.1 siduction/lxqt
@@ -74,4 +48,3 @@ content:
 * FlexDirectory (flexible directory plugin - für wen auch immer)
 * Gallery (from folder images) (could be really nice)
 * Github plugin (could be nice for LXQt)
-* OnWebChat
