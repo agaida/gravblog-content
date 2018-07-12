@@ -34,7 +34,6 @@ content:
 * Frontend Edit Button (edit pages if logged in as admin)
 * GDPR Privacy Setup (mal schauen)
 * Git Sync (must have) (Documentation needed)
-* Grav Google Maps Plugin (wofür auch immer)
 
 ### Cool Plugins
 
