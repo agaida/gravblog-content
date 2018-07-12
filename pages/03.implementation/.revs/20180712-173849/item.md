@@ -43,4 +43,3 @@ content:
 * FeedUs (für wen auch immer)
 * FileContent (include Files into templates - für wen auch immer)
 * FlexDirectory (flexible directory plugin - für wen auch immer)
-* Gallery (from folder images) (could be really nice)
