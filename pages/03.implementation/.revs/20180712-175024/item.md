@@ -35,8 +35,6 @@ content:
 * GDPR Privacy Setup (mal schauen)
 * Git Sync (must have) (Documentation needed)
 * Grav Google Maps Plugin (wofür auch immer)
-* (JSComments eventuell später)
-
 
 ### Cool Plugins
 
