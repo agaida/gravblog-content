@@ -24,23 +24,21 @@ If this thing is going to tear up the hooves, then only a portion of my private 
 Said, done, a virtual machine set up and the first nginx put on. At least at this point, the Debian packages were useful. A few hours later, the first test pages were set up and reproducibly put into operation. The only sticking point was chili project. A short test with a standalone combi passenger and Nginx also came quite well and thus began the doom.
 
 Unlike Apache, the modules for Nginx are not available separately, which are configured and compiled. "Of course" this also applies to all settings, paths etc. This doesn't even sound so tragic, but it will be on closer inspection:
-<ul>
-	<li>What if one of the most important modules for daily operation does not appear in any Debian package?</li>
-	<li>If the module is called a passenger-for this there is a Debian package, which in the installation also pushes a new nginx-of course without the other modules that you have installed with the regular nginx.</li>
-	<li>It is only logical that any configuration will be hacked mercilessly.</li>
-</ul>
+
+* What if one of the most important modules for daily operation does not appear in any Debian package?
+* If the module is called a passenger-for this there is a Debian package, which in the installation also pushes a new nginx-of course without the other modules that you have installed with the regular nginx.
+* It is only logical that any configuration will be hacked mercilessly.
+
 One possible solution is to uninstall the actually pre-configured Debian package, use it passenger package or simply abandon Debian packages without any if and however. This has its advantages and disadvantages.
 
 Benefits:
-<ul>
-	<li>It works, if not, then the responsible idiot sits right in front of the screen</li>
-	<li>One is independent of the sometimes somewhat disskussionwürdigen package maintenance in Debian in the area of web.</li>
-</ul>
+* It works, if not, then the responsible idiot sits right in front of the screen
+* One is independent of the sometimes somewhat disskussionwürdigen package maintenance in Debian in the area of web.
+
 Disadvantages:
-<ul>
-	<li>You are working on the parcel system, you have to rely on local construction of the packages. Depending on personal can not necessarily be a dream state, rather one for nightmares</li>
-	<li>Apt-Get dist-upgrade does not attack, I have to keep the stuff manually up to date. Compiling on an atom also doesn't really make fun</li>
-	<li>You have to keep a build system on the server. Not really a nice condition. But that's about Ruby, you need that in doubt either way, since the required gems will not be available in the version you need in Debian repo.</li>
-	<li>There is no package down, you can rebuild on any installation.</li>
-</ul>
+* You are working on the parcel system, you have to rely on local construction of the packages. Depending on personal can not necessarily be a dream state, rather one for nightmares
+* Apt-Get dist-upgrade does not attack, I have to keep the stuff manually up to date. Compiling on an atom also doesn't really make fun
+* You have to keep a build system on the server. Not really a nice condition. But that's about Ruby, you need that in doubt either way, since the required gems will not be available in the version you need in Debian repo.
+* There is no package down, you can rebuild on any installation.
+
 All in all, not a particularly satisfying condition, which I should actually solve by a separate package. Even nicer would be a separate package on this subject. However, since I have no plan how to implement the most cleverly it will remain at the Scriptanpassung, ideally would be the change directly in Debian.
