@@ -1,10 +1,11 @@
 ---
 title: 'Alternativen zu Apache: Nginx'
 published: true
+date: '18-06-2016 02:10'
 publish_date: '18-06-2016 02:10'
 content:
     items: '@self.children'
-    limit: 5
+    limit: '5'
     order:
         by: date
         dir: desc
