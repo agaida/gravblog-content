@@ -23,31 +23,32 @@ content:
     pagination: '1'
 ---
 
-DEutscher Test
-Every year I am reactive about the processing speed of my private websites. So again a few days ago. I admit that there are more potent webservers than my atom 510 with 4G, but as a desktop server the thing has its permission: The low cost at 24x7. Of course, one can remedy this: I could pack my blog, the wiki, the bug tracker on the big machine at Strato, but that's not what I want, because I feel it is very pleasant to have a server where I can try all the updates, next to the desk.
+Alle Jahre wieder rege ich mich über die Verarbeitungsgeschwindigkeit meiner privaten Webseiten auf. So auch wieder vor einigen Tagen. Ich gebe zu, dass es potentere Webserver gibt als meinen Atom 510 mit 4G, aber als Schreibtischserver hat das Ding seine Berechtigung: Die niedrigen Kosten bei 24x7. Natürlich kann man Abhilfe schaffen: Ich könnte meinen Blog, das Wiki, den Bugtracker auch auf die große Maschine bei Strato packen, genau das will ich aber nicht, da ich es als sehr angenehm empfinde, einen Server, auf dem ich alle Updates ausprobieren kann, neben dem Schreibtisch stehen zu haben.
 
-===
+<!--more-->
 
-If this thing is going to tear up the hooves, then only a portion of my private pages will be unreachable. A condition that I feel is very reassuring. Upgrading the atom is difficult, which is fully expanded, an AMD e 450 would have its advantages but cost money. An energy-saving i3 ditto, that would be shot with cannons on sparrows. The only chance to change what is in the software used. Since I came with lighttpd not really good which, the plan matured to redeploy to nginx.
+Wenn das Ding die Hufe hochreisst, dann ist nur ein Teil meiner privaten Seiten nicht erreichbar. Ein Zustand, den ich als sehr beruhigend empfinde. Aufrüsten des Atoms gestaltet sich schwierig, der ist voll ausgebaut, ein AMD E 450 hätte seine Vorteile, kostet aber Geld. Ein energiesparender i3 dito, das wäre mit Kanonen auf Spatzen geschossen. Die einzige Chance, was zu ändern, besteht in der verwendeten Software. Da ich mit lighttpd nicht wirklich gut zurrecht kam, reifte der Plan, auf nginx umzustellen.
 
-Said, done, a virtual machine set up and the first nginx put on. At least at this point, the Debian packages were useful. A few hours later, the first test pages were set up and reproducibly put into operation. The only sticking point was chili project. A short test with a standalone combi passenger and Nginx also came quite well and thus began the doom.
+Gesagt, getan, eine virtuelle Maschine aufgesetzt und den ersten nginx aufgesetzt. Wenigstens bist zu diesem Punkt waren die Debian-Pakete sinnvoll. Wenige Stunden später waren die ersten Testseiten aufgesetzt und reproduzierbar in Betrieb genommen. Der einzige Knackpunkt war Chiliproject. Ein kurzer Test mit einer Standalone-Kombi passenger und nginx kam auch ganz gut und damit begann das Verhängnis.
 
-Unlike Apache, the modules for Nginx are not available separately, which are configured and compiled. "Of course" this also applies to all settings, paths etc. This doesn't even sound so tragic, but it will be on closer inspection:
+Im Gegensatz zum Apachen sind die Module für Nginx nicht separat erhältlich, die werden konfiguriert und einkompiliert. "Natürlich" gilt das auch für alle Settings, Pfade etc. Das hört sich noch gar nicht mal so tragisch an, wird es aber bei näherer Betrachtung:
+<ul>
+	<li>Was tut man, wenn ausgerechnet eines der wichtigsten Module für den täglichen Betrieb in keinem Debian-Paket auftaucht?</li>
+	<li>Wenn das Modul zufällig passenger heisst - dafür gibt es ein debian-Paket, das einem aber bei der Installation auch einen neuen nginx unterschiebt - natürlich ohne die anderen Module, die man mit dem regulären nginx installiert hat.</li>
+	<li>Dass dann eine eventuell vorhandene Konfiguration gnadenlos zerhackt wird, ist nur konsequent.</li>
+</ul>
+Ein möglicher Lösungsansatz ist die Deinstallation des eigentlich sinnvoll vorkonfigurierten Debian-Pakets, die Nutzung es Passenger-Pakets oder einfach der Verzicht auf debian-Pakete ohne wenn und aber. Das hat alles seine Vor- und Nachteile.
 
-* What if one of the most important modules for daily operation does not appear in any Debian package?
-* If the module is called a passenger-for this there is a Debian package, which in the installation also pushes a new nginx-of course without the other modules that you have installed with the regular nginx.
-* It is only logical that any configuration will be hacked mercilessly.
-
-One possible solution is to uninstall the actually pre-configured Debian package, use it passenger package or simply abandon Debian packages without any if and however. This has its advantages and disadvantages.
-
-Benefits:
-* It works, if not, then the responsible idiot sits right in front of the screen
-* One is independent of the sometimes somewhat disskussionwürdigen package maintenance in Debian in the area of web.
-
-Disadvantages:
-* You are working on the parcel system, you have to rely on local construction of the packages. Depending on personal can not necessarily be a dream state, rather one for nightmares
-* Apt-Get dist-upgrade does not attack, I have to keep the stuff manually up to date. Compiling on an atom also doesn't really make fun
-* You have to keep a build system on the server. Not really a nice condition. But that's about Ruby, you need that in doubt either way, since the required gems will not be available in the version you need in Debian repo.
-* There is no package down, you can rebuild on any installation.
-
-All in all, not a particularly satisfying condition, which I should actually solve by a separate package. Even nicer would be a separate package on this subject. However, since I have no plan how to implement the most cleverly it will remain at the Scriptanpassung, ideally would be the change directly in Debian.
+Vorteile:
+<ul>
+	<li>Es funktioniert, wenn nicht, dann sitzt der dafür verantwortliche Trottel direkt vor dem Schirm</li>
+	<li>Man ist unabhängig von der manchmal etwas disskussionwürdigen Paketpflege bei debian im Bereich Web.</li>
+</ul>
+Nachteile:
+<ul>
+	<li>Man arbeitet am Paketsystem vorbei, man ist auf lokale Bau der Pakete angewiesen. Je nach persönlichem Können nicht unbedingt ein Traumzustand, eher einer für Albträume</li>
+	<li>apt-get dist-upgrade greift nicht, ich muss das Zeug manuell aktuell halten. Kompilieren auf einem Atom macht zudem nicht wirklich Spass</li>
+	<li>Man muss ein Build-System auf dem Server vorhalten. Nicht wirklich ein schöner Zustand. Das es aber um Ruby geht, braucht man das im Zweifel so oder so, da die benötigten Gems nicht in der Version, die man grade braucht, im debian-Repo vorhanden sein werden.</li>
+	<li>Es fällt kein Paket unten raus, man darf auf jeder Installation neu bauen.</li>
+</ul>
+Alles in allem kein sonderlich befriedigender Zustand, den ich eigentlich mal durch ein eigenes Paket lösen sollte. Noch schöner wäre ein eigenes Paket zu diesem Thema. Da ich aber keinen Plan habe, wie ich das am cleversten umsetze wird es vorerst bei der Scriptanpassung bleiben, ideal wäre natürlich die Änderung direkt in debian.
