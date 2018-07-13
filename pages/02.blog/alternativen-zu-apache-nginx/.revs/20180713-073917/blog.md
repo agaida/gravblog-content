@@ -17,7 +17,7 @@ facebookenable: false
 
 Every year I am reactive about the processing speed of my private websites. So again a few days ago. I admit that there are more potent webservers than my atom 510 with 4G, but as a desktop server the thing has its permission: The low cost at 24x7. Of course, one can remedy this: I could pack my blog, the wiki, the bug tracker on the big machine at Strato, but that's not what I want, because I feel it is very pleasant to have a server where I can try all the updates, next to the desk.
 
-===
+<!--more-->
 
 If this thing is going to tear up the hooves, then only a portion of my private pages will be unreachable. A condition that I feel is very reassuring. Upgrading the atom is difficult, which is fully expanded, an AMD e 450 would have its advantages but cost money. An energy-saving i3 ditto, that would be shot with cannons on sparrows. The only chance to change what is in the software used. Since I came with lighttpd not really good which, the plan matured to redeploy to nginx.
 
