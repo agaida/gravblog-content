@@ -7,9 +7,7 @@ taxonomy:
         - blog
     tag:
         - test
-        - journal
 external_links:
-    process: true
     mode: active
 twitterenable: false
 twittercardoptions: summary
