@@ -2,11 +2,6 @@
 title: 'Alternativen zu Apache: Nginx'
 published: false
 date: '18-06-2016 02:10'
-taxonomy:
-    category:
-        - blog
-    tag:
-        - test
 external_links:
     mode: active
 twitterenable: false
