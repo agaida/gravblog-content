@@ -10,6 +10,8 @@ taxonomy:
 external_links:
     process: true
     mode: active
+routes:
+    default: /201/05/
 twitterenable: false
 twittercardoptions: summary
 articleenabled: false
