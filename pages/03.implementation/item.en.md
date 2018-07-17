@@ -1,5 +1,12 @@
 ---
 title: Implementation
+taxonomy:
+    category:
+        - Categ
+    tag:
+        - Impl
+    month:
+        - '02'
 twitterenable: false
 twittercardoptions: summary
 articleenabled: false
