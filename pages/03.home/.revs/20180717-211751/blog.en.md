@@ -1,4 +1,5 @@
 ---
+title: Blog
 sitemap:
     changefreq: monthly
 body_classes: 'header-image fullwidth'
