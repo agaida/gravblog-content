@@ -1,8 +1,10 @@
 ---
-title: Blog
 sitemap:
     changefreq: monthly
 body_classes: 'header-image fullwidth'
+routable: true
+routes:
+    default: /
 content:
     items: '@self.children'
     limit: 5
@@ -14,7 +16,7 @@ twitterenable: false
 twittercardoptions: summary
 articleenabled: false
 facebookenable: false
-blog_url: blog
+blog_url: /
 feed:
     description: 'Sample Blog Description'
     limit: 10
