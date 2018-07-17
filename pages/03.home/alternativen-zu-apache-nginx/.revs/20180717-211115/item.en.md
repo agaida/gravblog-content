@@ -11,7 +11,7 @@ external_links:
     process: true
     mode: active
 routes:
-    default: /2016/04/alternativen-zu-apache-nginx
+    default: /201/05/
 twitterenable: false
 twittercardoptions: summary
 articleenabled: false
