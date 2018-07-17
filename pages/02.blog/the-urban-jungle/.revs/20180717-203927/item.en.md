@@ -9,7 +9,7 @@ taxonomy:
         - photography
         - city
 routes:
-    default: /2012/teh-fuck
+    default: 2012/teh-fuck
 twitterenable: false
 twittercardoptions: summary
 articleenabled: false
