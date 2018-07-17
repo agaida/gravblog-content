@@ -3,6 +3,9 @@ title: Blog
 sitemap:
     changefreq: monthly
 body_classes: 'header-image fullwidth'
+routable: true
+routes:
+    default: /
 content:
     items: '@self.children'
     limit: 5
