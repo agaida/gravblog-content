@@ -17,7 +17,7 @@ twitterenable: false
 twittercardoptions: summary
 articleenabled: false
 facebookenable: false
-blog_url: blog
+blog_url: /
 feed:
     description: 'Sample Blog Description'
     limit: 10
